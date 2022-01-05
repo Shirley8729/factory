@@ -27,7 +27,7 @@ public class MapperTest {
     public void TestsqlSession(){
 
 //        System.out.println(manufactureMapper);
-        manufactureMapper.insert(new Manufacture(null,333,1234,"1234567","厂商1111",120,null,"修改人1111","brand1111"));
+        manufactureMapper.insert(new Manufacture("厂商",333,1234,"1234567","厂商1111",120,null,"修改人1111","brand1111"));
 
 //        ManufactureMapper mapper = sqlSession.getMapper(ManufactureMapper.class);
 //

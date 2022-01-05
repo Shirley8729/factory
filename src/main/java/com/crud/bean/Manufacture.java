@@ -1,7 +1,7 @@
 package com.crud.bean;
 
 public class Manufacture {
-    private Integer id;
+    private String infoType;
 
     private Integer e0;
 
@@ -22,8 +22,8 @@ public class Manufacture {
     public Manufacture() {
     }
 
-    public Manufacture(Integer id, Integer e0, Integer e1, String bar, String manufacture, Integer manufactureCode, Integer updateType, String remark, String brand) {
-        this.id = id;
+    public Manufacture(String infoType, Integer e0, Integer e1, String bar, String manufacture, Integer manufactureCode, Integer updateType, String remark, String brand) {
+        this.infoType = infoType;
         this.e0 = e0;
         this.e1 = e1;
         this.bar = bar;
@@ -34,13 +34,11 @@ public class Manufacture {
         this.brand = brand;
     }
 
-    public Integer getId() {
-        return id;
+    public String getId() {
+        return infoType;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+    public void setId(String infoType) { this.infoType = infoType == null ? null : infoType.trim(); }
 
     public Integer getE0() {
         return e0;
