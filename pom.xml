@@ -107,17 +107,12 @@
 
         <!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
         <dependency>
-            <groupId>c3p0</groupId>
-            <artifactId>c3p0</artifactId>
-            <version>0.9.1</version>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.1.21</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.10</version>
-        </dependency>
+
 
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
         <dependency>
@@ -163,9 +158,9 @@
         </dependency>
 
         <dependency>
-            <groupId>com.github.pagehelper</groupId>
-            <artifactId>pagehelper</artifactId>
-            <version>5.0.1</version>
+            <groupId>com.github.fangjinuo.sqlhelper</groupId>
+            <artifactId>sqlhelper-dialect</artifactId>
+            <version>3.6.2</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/javax.servlet.jsp/javax.servlet.jsp-api -->
@@ -175,6 +170,16 @@
             <version>2.0</version>
             <scope>provided</scope>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/sqljdbc4 -->
+        <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>sqljdbc4</artifactId>
+            <version>4.0</version>
+        </dependency>
+
+
+
 
     </dependencies>
     <build>

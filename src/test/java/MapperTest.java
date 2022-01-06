@@ -1,13 +1,9 @@
-import com.crud.bean.Manufacture;
-import com.crud.dao.ManufactureMapper;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import java.util.UUID;
 
 /**
  * @author Shirley
@@ -17,8 +13,8 @@ import java.util.UUID;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"classpath:applicationContext.xml"})
 public class MapperTest {
-    @Autowired
-    ManufactureMapper manufactureMapper;
+//    @Autowired
+//    ManufactureMapper manufactureMapper;
 
     @Autowired
     SqlSession sqlSession;
@@ -27,7 +23,7 @@ public class MapperTest {
     public void TestsqlSession(){
 
 //        System.out.println(manufactureMapper);
-        manufactureMapper.insert(new Manufacture("厂商",333,1234,"1234567","厂商1111",120,null,"修改人1111","brand1111"));
+//        manufactureMapper.insert(new Manufacture("厂商",333,1234,"1234567","厂商1111",120,null,"修改人1111","brand1111"));
 
 //        ManufactureMapper mapper = sqlSession.getMapper(ManufactureMapper.class);
 //

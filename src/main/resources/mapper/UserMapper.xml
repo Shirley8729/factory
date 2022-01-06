@@ -2,9 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.crud.dao.UserMapper">
   <resultMap id="BaseResultMap" type="com.crud.bean.User">
-    <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="username" jdbcType="VARCHAR" property="username" />
-    <result column="password" jdbcType="VARCHAR" property="password" />
+    <id column="Category" jdbcType="INTEGER" property="category" />
+    <result column="Person_Incharge" jdbcType="NVARCHAR" property="personIncharge" />
+    <result column="Email_Address" jdbcType="NVARCHAR" property="emailAddress" />
+    <result column="comments" jdbcType="NVARCHAR" property="comments" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -65,7 +66,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, username, password
+    Category, Person_Incharge, Email_Address, comments
   </sql>
   <select id="selectByExample" parameterType="com.crud.bean.UserExample" resultMap="BaseResultMap">
     select
@@ -73,7 +74,7 @@
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from tb_user
+    from SleepBC_Category_Incharge
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -84,67 +85,76 @@
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from tb_user
-    where id = #{id,jdbcType=INTEGER}
+    from SleepBC_Category_Incharge
+    where Category = #{category,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from tb_user
-    where id = #{id,jdbcType=INTEGER}
+    delete from SleepBC_Category_Incharge
+    where Category = #{category,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="com.crud.bean.UserExample">
-    delete from tb_user
+    delete from SleepBC_Category_Incharge
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
   <insert id="insert" parameterType="com.crud.bean.User">
-    insert into tb_user (id, username, password
-      )
-    values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}
-      )
+    insert into SleepBC_Category_Incharge (Category, Person_Incharge, Email_Address, 
+      comments)
+    values (#{category,jdbcType=INTEGER}, #{personIncharge,jdbcType=NVARCHAR}, #{emailAddress,jdbcType=NVARCHAR}, 
+      #{comments,jdbcType=NVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.crud.bean.User">
-    insert into tb_user
+    insert into SleepBC_Category_Incharge
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        id,
+      <if test="category != null">
+        Category,
       </if>
-      <if test="username != null">
-        username,
+      <if test="personIncharge != null">
+        Person_Incharge,
       </if>
-      <if test="password != null">
-        password,
+      <if test="emailAddress != null">
+        Email_Address,
+      </if>
+      <if test="comments != null">
+        comments,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        #{id,jdbcType=INTEGER},
+      <if test="category != null">
+        #{category,jdbcType=INTEGER},
       </if>
-      <if test="username != null">
-        #{username,jdbcType=VARCHAR},
+      <if test="personIncharge != null">
+        #{personIncharge,jdbcType=NVARCHAR},
       </if>
-      <if test="password != null">
-        #{password,jdbcType=VARCHAR},
+      <if test="emailAddress != null">
+        #{emailAddress,jdbcType=NVARCHAR},
+      </if>
+      <if test="comments != null">
+        #{comments,jdbcType=NVARCHAR},
       </if>
     </trim>
   </insert>
   <select id="countByExample" parameterType="com.crud.bean.UserExample" resultType="java.lang.Long">
-    select count(*) from tb_user
+    select count(*) from SleepBC_Category_Incharge
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map">
-    update tb_user
+    update SleepBC_Category_Incharge
     <set>
-      <if test="record.id != null">
-        id = #{record.id,jdbcType=INTEGER},
+      <if test="record.category != null">
+        Category = #{record.category,jdbcType=INTEGER},
       </if>
-      <if test="record.username != null">
-        username = #{record.username,jdbcType=VARCHAR},
+      <if test="record.personIncharge != null">
+        Person_Incharge = #{record.personIncharge,jdbcType=NVARCHAR},
       </if>
-      <if test="record.password != null">
-        password = #{record.password,jdbcType=VARCHAR},
+      <if test="record.emailAddress != null">
+        Email_Address = #{record.emailAddress,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.comments != null">
+        comments = #{record.comments,jdbcType=NVARCHAR},
       </if>
     </set>
     <if test="_parameter != null">
@@ -152,30 +162,35 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
-    update tb_user
-    set id = #{record.id,jdbcType=INTEGER},
-      username = #{record.username,jdbcType=VARCHAR},
-      password = #{record.password,jdbcType=VARCHAR}
+    update SleepBC_Category_Incharge
+    set Category = #{record.category,jdbcType=INTEGER},
+      Person_Incharge = #{record.personIncharge,jdbcType=NVARCHAR},
+      Email_Address = #{record.emailAddress,jdbcType=NVARCHAR},
+      comments = #{record.comments,jdbcType=NVARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
   <update id="updateByPrimaryKeySelective" parameterType="com.crud.bean.User">
-    update tb_user
+    update SleepBC_Category_Incharge
     <set>
-      <if test="username != null">
-        username = #{username,jdbcType=VARCHAR},
+      <if test="personIncharge != null">
+        Person_Incharge = #{personIncharge,jdbcType=NVARCHAR},
       </if>
-      <if test="password != null">
-        password = #{password,jdbcType=VARCHAR},
+      <if test="emailAddress != null">
+        Email_Address = #{emailAddress,jdbcType=NVARCHAR},
+      </if>
+      <if test="comments != null">
+        comments = #{comments,jdbcType=NVARCHAR},
       </if>
     </set>
-    where id = #{id,jdbcType=INTEGER}
+    where Category = #{category,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.crud.bean.User">
-    update tb_user
-    set username = #{username,jdbcType=VARCHAR},
-      password = #{password,jdbcType=VARCHAR}
-    where id = #{id,jdbcType=INTEGER}
+    update SleepBC_Category_Incharge
+    set Person_Incharge = #{personIncharge,jdbcType=NVARCHAR},
+      Email_Address = #{emailAddress,jdbcType=NVARCHAR},
+      comments = #{comments,jdbcType=NVARCHAR}
+    where Category = #{category,jdbcType=INTEGER}
   </update>
 </mapper>

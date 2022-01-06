@@ -2,8 +2,6 @@ package com.crud.controller;
 
 import com.crud.bean.Manufacture;
 import com.crud.service.ManufactureService;
-import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,14 +27,14 @@ public class ManufactureController {
 
         //引入PageHelper
 
-        PageHelper.startPage(pn,10);
-
-        List<Manufacture> manufactures=manufactureService.getAll();
-
-        //连续显示的页数：5
-        PageInfo page=new PageInfo(manufactures,5);
-
-        model.addAttribute("pageInfo",page);
+//        PageHelper.startPage(pn,10);
+//
+//        List<Manufacture> manufactures=manufactureService.getAll();
+//
+//        //连续显示的页数：5
+//        PageInfo page=new PageInfo(manufactures,5);
+//
+//        model.addAttribute("pageInfo",page);
 
 
         return "list";

@@ -1,51 +1,56 @@
 package com.crud.bean;
 
 public class Manufacture {
-    private String infoType;
+    private String rep30050;
 
-    private Integer e0;
+    private String 中文厂商;
+
+    private Integer e01;
 
     private Integer e1;
 
-    private String bar;
+    private String brand;
+
+    private String 厂商码;
+
+    private String use;
+
+    private String infotype;
 
     private String manufacture;
 
     private Integer manufactureCode;
 
-    private Integer updateType;
+    private String newBrand;
+
+    private Integer updatetype;
 
     private String remark;
 
-    private String brand;
+    private Integer id;
 
-    public Manufacture() {
+    public String getRep30050() {
+        return rep30050;
     }
 
-    public Manufacture(String infoType, Integer e0, Integer e1, String bar, String manufacture, Integer manufactureCode, Integer updateType, String remark, String brand) {
-        this.infoType = infoType;
-        this.e0 = e0;
-        this.e1 = e1;
-        this.bar = bar;
-        this.manufacture = manufacture;
-        this.manufactureCode = manufactureCode;
-        this.updateType = updateType;
-        this.remark = remark;
-        this.brand = brand;
+    public void setRep30050(String rep30050) {
+        this.rep30050 = rep30050 == null ? null : rep30050.trim();
     }
 
-    public String getId() {
-        return infoType;
+    public String get中文厂商() {
+        return 中文厂商;
     }
 
-    public void setId(String infoType) { this.infoType = infoType == null ? null : infoType.trim(); }
-
-    public Integer getE0() {
-        return e0;
+    public void set中文厂商(String 中文厂商) {
+        this.中文厂商 = 中文厂商 == null ? null : 中文厂商.trim();
     }
 
-    public void setE0(Integer e0) {
-        this.e0 = e0;
+    public Integer getE01() {
+        return e01;
+    }
+
+    public void setE01(Integer e01) {
+        this.e01 = e01;
     }
 
     public Integer getE1() {
@@ -56,12 +61,36 @@ public class Manufacture {
         this.e1 = e1;
     }
 
-    public String getBar() {
-        return bar;
+    public String getBrand() {
+        return brand;
     }
 
-    public void setBar(String bar) {
-        this.bar = bar == null ? null : bar.trim();
+    public void setBrand(String brand) {
+        this.brand = brand == null ? null : brand.trim();
+    }
+
+    public String get厂商码() {
+        return 厂商码;
+    }
+
+    public void set厂商码(String 厂商码) {
+        this.厂商码 = 厂商码 == null ? null : 厂商码.trim();
+    }
+
+    public String getUse() {
+        return use;
+    }
+
+    public void setUse(String use) {
+        this.use = use == null ? null : use.trim();
+    }
+
+    public String getInfotype() {
+        return infotype;
+    }
+
+    public void setInfotype(String infotype) {
+        this.infotype = infotype == null ? null : infotype.trim();
     }
 
     public String getManufacture() {
@@ -80,12 +109,20 @@ public class Manufacture {
         this.manufactureCode = manufactureCode;
     }
 
-    public Integer getUpdateType() {
-        return updateType;
+    public String getNewBrand() {
+        return newBrand;
     }
 
-    public void setUpdateType(Integer updateType) {
-        this.updateType = updateType;
+    public void setNewBrand(String newBrand) {
+        this.newBrand = newBrand == null ? null : newBrand.trim();
+    }
+
+    public Integer getUpdatetype() {
+        return updatetype;
+    }
+
+    public void setUpdatetype(Integer updatetype) {
+        this.updatetype = updatetype;
     }
 
     public String getRemark() {
@@ -96,11 +133,11 @@ public class Manufacture {
         this.remark = remark == null ? null : remark.trim();
     }
 
-    public String getBrand() {
-        return brand;
+    public Integer getId() {
+        return id;
     }
 
-    public void setBrand(String brand) {
-        this.brand = brand == null ? null : brand.trim();
+    public void setId(Integer id) {
+        this.id = id;
     }
 }

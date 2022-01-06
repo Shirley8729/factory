@@ -6,14 +6,24 @@
     <settings>
 <!--        驼峰命名规则-->
         <setting name="mapUnderscoreToCamelCase" value="true"/>
+
+        <setting name="defaultScriptingLanguage" value="com.github.fangjinuo.sqlhelper.mybatis.plugins.pagination.CustomScriptLanguageDriver" />
     </settings>
     
     <typeAliases>
         <package name="com.crud.bean"/>
     </typeAliases>
 
+<!--    <plugins>-->
+<!--        <plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>-->
+<!--    </plugins>-->
+
     <plugins>
-        <plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+        <plugin interceptor="com.github.fangjinuo.sqlhelper.mybatis.plugins.pagination.MybatisPaginationPlugin" />
     </plugins>
 
+
+    <databaseIdProvider type="DB_VENDOR">
+        <property name="SQL Server" value="sqlserver"/>
+    </databaseIdProvider>
 </configuration>

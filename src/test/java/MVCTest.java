@@ -1,5 +1,4 @@
-import com.crud.bean.Manufacture;
-import com.github.pagehelper.PageInfo;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -41,30 +40,36 @@ public class MVCTest {
     }
 
     @Test
-    public void testPage() throws Exception {
-        //模拟请求，拿到返回值
-        MvcResult result = mockMvc.perform(MockMvcRequestBuilders.get("/manufacture").param("pn", "1")).andReturn();
+    public void testPage(){
 
-        MockHttpServletRequest request = result.getRequest();
 
-        PageInfo pageInfo = (PageInfo) request.getAttribute("pageInfo");
-
-        System.out.println("当前页码"+pageInfo.getPageNum());
-        System.out.println("总页码"+pageInfo.getPages());
-        System.out.println("总记录数"+pageInfo.getTotal());
-        System.out.println("显示页码数：");
-
-        int[] nums=pageInfo.getNavigatepageNums();
-        for (int num : nums) {
-            System.out.println(" "+num);
-            
-        }
-
-        //获取厂商数据
-        List<Manufacture> list = pageInfo.getList();
-
-        for (Manufacture manufacture : list) {
-            System.out.println("ID:"+manufacture.getId()+"====manufacture"+manufacture.getManufacture());
-        }
+//        模拟请求，拿到返回值
+//        MvcResult result = mockMvc.perform(MockMvcRequestBuilders.get("/manufacture").param("pn", "1")).andReturn();
+//
+//        MockHttpServletRequest request = result.getRequest();
+//
+//
+//        PageInfo pageInfo = (PageInfo) request.getAttribute("pageInfo");
+//
+//        PagingRequest
+//        System.out.println("当前页码"+pageInfo.getPageNum());
+//        System.out.println("总页码"+pageInfo.getPages());
+//        System.out.println("总记录数"+pageInfo.getTotal());
+//        System.out.println("显示页码数：");
+//
+//        int[] nums=pageInfo.getNavigatepageNums();
+//        for (int num : nums) {
+//            System.out.println(" "+num);
+//
+//        }
+//
+//        //获取厂商数据
+//        List<Manufacture> list = pageInfo.getList();
+//
+//        for (Manufacture manufacture : list) {
+//            System.out.println("ID:"+manufacture.getId()+"====manufacture"+manufacture.getManufacture());
+//        }
     }
+
+
 }

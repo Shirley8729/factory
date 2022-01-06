@@ -11,11 +11,19 @@
             <property name="suppressAllComments" value="true"/>
         </commentGenerator>
 <!--        配置数据库连接信息-->
+<!--        <jdbcConnection-->
+<!--                driverClass="com.microsoft.sqlserver.jdbc.SQLServerDriver"-->
+<!--                connectionURL="jdbc:sqlserver://10.20.12.38:1433;DatabaseName=manufacture"-->
+<!--                userId="sa"-->
+<!--                password="456">-->
+<!--        </jdbcConnection>-->
+
+
         <jdbcConnection
-                driverClass="com.mysql.jdbc.Driver"
-                connectionURL="jdbc:mysql://localhost:3306/manufacture"
-                userId="root"
-                password="root">
+                driverClass="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+                connectionURL="jdbc:sqlserver://10.20.12.103:1433;DatabaseName=DataEntry"
+                userId="sa"
+                password="456">
         </jdbcConnection>
 
         <javaTypeResolver >
@@ -39,8 +47,8 @@
         </javaClientGenerator>
 
 <!--        指定每个表的生成策略-->
-        <table  tableName="tb_user" domainObjectName="User" ></table>
-        <table  tableName="tb_manufacture" domainObjectName="Manufacture" ></table>
+        <table  tableName="SleepBC_Category_Incharge" domainObjectName="User" ></table>
+<!--        <table  tableName="category_brand_barcode_manufacture_total_all" domainObjectName="Manufacture" ></table>-->
 
     </context>
 </generatorConfiguration>
