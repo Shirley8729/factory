@@ -3,7 +3,7 @@ package com.crud.bean;
 public class Manufacture {
     private String rep30050;
 
-    private String 中文厂商;
+    private String manufactureChinese;
 
     private Integer e01;
 
@@ -11,9 +11,9 @@ public class Manufacture {
 
     private String brand;
 
-    private String 厂商码;
+    private String bar;
 
-    private String use;
+    private String whether;
 
     private String infotype;
 
@@ -37,12 +37,12 @@ public class Manufacture {
         this.rep30050 = rep30050 == null ? null : rep30050.trim();
     }
 
-    public String get中文厂商() {
-        return 中文厂商;
+    public String getManufactureChinese() {
+        return manufactureChinese;
     }
 
-    public void set中文厂商(String 中文厂商) {
-        this.中文厂商 = 中文厂商 == null ? null : 中文厂商.trim();
+    public void setManufactureChinese(String manufactureChinese) {
+        this.manufactureChinese = manufactureChinese == null ? null : manufactureChinese.trim();
     }
 
     public Integer getE01() {
@@ -69,20 +69,20 @@ public class Manufacture {
         this.brand = brand == null ? null : brand.trim();
     }
 
-    public String get厂商码() {
-        return 厂商码;
+    public String getBar() {
+        return bar;
     }
 
-    public void set厂商码(String 厂商码) {
-        this.厂商码 = 厂商码 == null ? null : 厂商码.trim();
+    public void setBar(String bar) {
+        this.bar = bar == null ? null : bar.trim();
     }
 
-    public String getUse() {
-        return use;
+    public String getWhether() {
+        return whether;
     }
 
-    public void setUse(String use) {
-        this.use = use == null ? null : use.trim();
+    public void setWhether(String whether) {
+        this.whether = whether == null ? null : whether.trim();
     }
 
     public String getInfotype() {

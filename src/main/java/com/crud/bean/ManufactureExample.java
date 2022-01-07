@@ -174,73 +174,73 @@ public class ManufactureExample {
             return (Criteria) this;
         }
 
-        public Criteria and中文厂商IsNull() {
+        public Criteria andManufactureChineseIsNull() {
             addCriterion("中文厂商 is null");
             return (Criteria) this;
         }
 
-        public Criteria and中文厂商IsNotNull() {
+        public Criteria andManufactureChineseIsNotNull() {
             addCriterion("中文厂商 is not null");
             return (Criteria) this;
         }
 
-        public Criteria and中文厂商EqualTo(String value) {
-            addCriterion("中文厂商 =", value, "中文厂商");
+        public Criteria andManufactureChineseEqualTo(String value) {
+            addCriterion("中文厂商 =", value, "manufactureChinese");
             return (Criteria) this;
         }
 
-        public Criteria and中文厂商NotEqualTo(String value) {
-            addCriterion("中文厂商 <>", value, "中文厂商");
+        public Criteria andManufactureChineseNotEqualTo(String value) {
+            addCriterion("中文厂商 <>", value, "manufactureChinese");
             return (Criteria) this;
         }
 
-        public Criteria and中文厂商GreaterThan(String value) {
-            addCriterion("中文厂商 >", value, "中文厂商");
+        public Criteria andManufactureChineseGreaterThan(String value) {
+            addCriterion("中文厂商 >", value, "manufactureChinese");
             return (Criteria) this;
         }
 
-        public Criteria and中文厂商GreaterThanOrEqualTo(String value) {
-            addCriterion("中文厂商 >=", value, "中文厂商");
+        public Criteria andManufactureChineseGreaterThanOrEqualTo(String value) {
+            addCriterion("中文厂商 >=", value, "manufactureChinese");
             return (Criteria) this;
         }
 
-        public Criteria and中文厂商LessThan(String value) {
-            addCriterion("中文厂商 <", value, "中文厂商");
+        public Criteria andManufactureChineseLessThan(String value) {
+            addCriterion("中文厂商 <", value, "manufactureChinese");
             return (Criteria) this;
         }
 
-        public Criteria and中文厂商LessThanOrEqualTo(String value) {
-            addCriterion("中文厂商 <=", value, "中文厂商");
+        public Criteria andManufactureChineseLessThanOrEqualTo(String value) {
+            addCriterion("中文厂商 <=", value, "manufactureChinese");
             return (Criteria) this;
         }
 
-        public Criteria and中文厂商Like(String value) {
-            addCriterion("中文厂商 like", value, "中文厂商");
+        public Criteria andManufactureChineseLike(String value) {
+            addCriterion("中文厂商 like", value, "manufactureChinese");
             return (Criteria) this;
         }
 
-        public Criteria and中文厂商NotLike(String value) {
-            addCriterion("中文厂商 not like", value, "中文厂商");
+        public Criteria andManufactureChineseNotLike(String value) {
+            addCriterion("中文厂商 not like", value, "manufactureChinese");
             return (Criteria) this;
         }
 
-        public Criteria and中文厂商In(List<String> values) {
-            addCriterion("中文厂商 in", values, "中文厂商");
+        public Criteria andManufactureChineseIn(List<String> values) {
+            addCriterion("中文厂商 in", values, "manufactureChinese");
             return (Criteria) this;
         }
 
-        public Criteria and中文厂商NotIn(List<String> values) {
-            addCriterion("中文厂商 not in", values, "中文厂商");
+        public Criteria andManufactureChineseNotIn(List<String> values) {
+            addCriterion("中文厂商 not in", values, "manufactureChinese");
             return (Criteria) this;
         }
 
-        public Criteria and中文厂商Between(String value1, String value2) {
-            addCriterion("中文厂商 between", value1, value2, "中文厂商");
+        public Criteria andManufactureChineseBetween(String value1, String value2) {
+            addCriterion("中文厂商 between", value1, value2, "manufactureChinese");
             return (Criteria) this;
         }
 
-        public Criteria and中文厂商NotBetween(String value1, String value2) {
-            addCriterion("中文厂商 not between", value1, value2, "中文厂商");
+        public Criteria andManufactureChineseNotBetween(String value1, String value2) {
+            addCriterion("中文厂商 not between", value1, value2, "manufactureChinese");
             return (Criteria) this;
         }
 
@@ -434,143 +434,143 @@ public class ManufactureExample {
             return (Criteria) this;
         }
 
-        public Criteria and厂商码IsNull() {
+        public Criteria andBarIsNull() {
             addCriterion("厂商码 is null");
             return (Criteria) this;
         }
 
-        public Criteria and厂商码IsNotNull() {
+        public Criteria andBarIsNotNull() {
             addCriterion("厂商码 is not null");
             return (Criteria) this;
         }
 
-        public Criteria and厂商码EqualTo(String value) {
-            addCriterion("厂商码 =", value, "厂商码");
+        public Criteria andBarEqualTo(String value) {
+            addCriterion("厂商码 =", value, "bar");
             return (Criteria) this;
         }
 
-        public Criteria and厂商码NotEqualTo(String value) {
-            addCriterion("厂商码 <>", value, "厂商码");
+        public Criteria andBarNotEqualTo(String value) {
+            addCriterion("厂商码 <>", value, "bar");
             return (Criteria) this;
         }
 
-        public Criteria and厂商码GreaterThan(String value) {
-            addCriterion("厂商码 >", value, "厂商码");
+        public Criteria andBarGreaterThan(String value) {
+            addCriterion("厂商码 >", value, "bar");
             return (Criteria) this;
         }
 
-        public Criteria and厂商码GreaterThanOrEqualTo(String value) {
-            addCriterion("厂商码 >=", value, "厂商码");
+        public Criteria andBarGreaterThanOrEqualTo(String value) {
+            addCriterion("厂商码 >=", value, "bar");
             return (Criteria) this;
         }
 
-        public Criteria and厂商码LessThan(String value) {
-            addCriterion("厂商码 <", value, "厂商码");
+        public Criteria andBarLessThan(String value) {
+            addCriterion("厂商码 <", value, "bar");
             return (Criteria) this;
         }
 
-        public Criteria and厂商码LessThanOrEqualTo(String value) {
-            addCriterion("厂商码 <=", value, "厂商码");
+        public Criteria andBarLessThanOrEqualTo(String value) {
+            addCriterion("厂商码 <=", value, "bar");
             return (Criteria) this;
         }
 
-        public Criteria and厂商码Like(String value) {
-            addCriterion("厂商码 like", value, "厂商码");
+        public Criteria andBarLike(String value) {
+            addCriterion("厂商码 like", value, "bar");
             return (Criteria) this;
         }
 
-        public Criteria and厂商码NotLike(String value) {
-            addCriterion("厂商码 not like", value, "厂商码");
+        public Criteria andBarNotLike(String value) {
+            addCriterion("bar not like", value, "bar");
             return (Criteria) this;
         }
 
-        public Criteria and厂商码In(List<String> values) {
-            addCriterion("厂商码 in", values, "厂商码");
+        public Criteria andBarIn(List<String> values) {
+            addCriterion("厂商码 in", values, "bar");
             return (Criteria) this;
         }
 
-        public Criteria and厂商码NotIn(List<String> values) {
-            addCriterion("厂商码 not in", values, "厂商码");
+        public Criteria andBarNotIn(List<String> values) {
+            addCriterion("厂商码 not in", values, "bar");
             return (Criteria) this;
         }
 
-        public Criteria and厂商码Between(String value1, String value2) {
-            addCriterion("厂商码 between", value1, value2, "厂商码");
+        public Criteria andBarBetween(String value1, String value2) {
+            addCriterion("bar between", value1, value2, "bar");
             return (Criteria) this;
         }
 
-        public Criteria and厂商码NotBetween(String value1, String value2) {
-            addCriterion("厂商码 not between", value1, value2, "厂商码");
+        public Criteria andBarNotBetween(String value1, String value2) {
+            addCriterion("厂商码 not between", value1, value2, "bar");
             return (Criteria) this;
         }
 
-        public Criteria andUseIsNull() {
-            addCriterion("USE is null");
+        public Criteria andWhetherIsNull() {
+            addCriterion("whether is null");
             return (Criteria) this;
         }
 
-        public Criteria andUseIsNotNull() {
-            addCriterion("USE is not null");
+        public Criteria andWhetherIsNotNull() {
+            addCriterion("whether is not null");
             return (Criteria) this;
         }
 
-        public Criteria andUseEqualTo(String value) {
-            addCriterion("USE =", value, "use");
+        public Criteria andWhetherEqualTo(String value) {
+            addCriterion("whether =", value, "whether");
             return (Criteria) this;
         }
 
-        public Criteria andUseNotEqualTo(String value) {
-            addCriterion("USE <>", value, "use");
+        public Criteria andWhetherNotEqualTo(String value) {
+            addCriterion("whether<>", value, "whether");
             return (Criteria) this;
         }
 
-        public Criteria andUseGreaterThan(String value) {
-            addCriterion("USE >", value, "use");
+        public Criteria andWhetherGreaterThan(String value) {
+            addCriterion("whether >", value, "whether");
             return (Criteria) this;
         }
 
-        public Criteria andUseGreaterThanOrEqualTo(String value) {
-            addCriterion("USE >=", value, "use");
+        public Criteria andWhetherGreaterThanOrEqualTo(String value) {
+            addCriterion("whether >=", value, "whether");
             return (Criteria) this;
         }
 
-        public Criteria andUseLessThan(String value) {
-            addCriterion("USE <", value, "use");
+        public Criteria andWhetherLessThan(String value) {
+            addCriterion("whether <", value, "whether");
             return (Criteria) this;
         }
 
-        public Criteria andUseLessThanOrEqualTo(String value) {
-            addCriterion("USE <=", value, "use");
+        public Criteria andWhetherLessThanOrEqualTo(String value) {
+            addCriterion("whether <=", value, "whether");
             return (Criteria) this;
         }
 
-        public Criteria andUseLike(String value) {
-            addCriterion("USE like", value, "use");
+        public Criteria andWhetherLike(String value) {
+            addCriterion("whether like", value, "whether");
             return (Criteria) this;
         }
 
-        public Criteria andUseNotLike(String value) {
-            addCriterion("USE not like", value, "use");
+        public Criteria andWhetherNotLike(String value) {
+            addCriterion("whether not like", value, "whether");
             return (Criteria) this;
         }
 
-        public Criteria andUseIn(List<String> values) {
-            addCriterion("USE in", values, "use");
+        public Criteria andWhetherIn(List<String> values) {
+            addCriterion("whether in", values, "whether");
             return (Criteria) this;
         }
 
-        public Criteria andUseNotIn(List<String> values) {
-            addCriterion("USE not in", values, "use");
+        public Criteria andWhetherNotIn(List<String> values) {
+            addCriterion("whether not in", values, "whether");
             return (Criteria) this;
         }
 
-        public Criteria andUseBetween(String value1, String value2) {
-            addCriterion("USE between", value1, value2, "use");
+        public Criteria andWhetherBetween(String value1, String value2) {
+            addCriterion("whether between", value1, value2, "whether");
             return (Criteria) this;
         }
 
-        public Criteria andUseNotBetween(String value1, String value2) {
-            addCriterion("USE not between", value1, value2, "use");
+        public Criteria andWhetherNotBetween(String value1, String value2) {
+            addCriterion("whether not between", value1, value2, "whether");
             return (Criteria) this;
         }
 

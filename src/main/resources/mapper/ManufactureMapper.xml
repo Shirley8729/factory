@@ -3,12 +3,12 @@
 <mapper namespace="com.crud.dao.ManufactureMapper">
   <resultMap id="BaseResultMap" type="com.crud.bean.Manufacture">
     <result column="REP30050" jdbcType="VARCHAR" property="rep30050" />
-    <result column="中文厂商" jdbcType="VARCHAR" property="中文厂商" />
+    <result column="中文厂商" jdbcType="VARCHAR" property="manufactureChinese" />
     <result column="E0_1" jdbcType="INTEGER" property="e01" />
     <result column="E1" jdbcType="INTEGER" property="e1" />
     <result column="brand" jdbcType="VARCHAR" property="brand" />
-    <result column="厂商码" jdbcType="VARCHAR" property="厂商码" />
-    <result column="USE" jdbcType="NCHAR" property="use" />
+    <result column="厂商码" jdbcType="VARCHAR" property="bar" />
+    <result column="whether" jdbcType="NCHAR" property="whether" />
     <result column="InfoType" jdbcType="NVARCHAR" property="infotype" />
     <result column="Manufacture" jdbcType="NVARCHAR" property="manufacture" />
     <result column="Manufacture_code" jdbcType="INTEGER" property="manufactureCode" />
@@ -76,7 +76,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    REP30050, 中文厂商, E0_1, E1, brand, 厂商码, [USE], InfoType, Manufacture, Manufacture_code,
+    REP30050, 中文厂商, E0_1, E1, brand, 厂商码 , whether , InfoType, Manufacture, Manufacture_code,
     new_brand, UpdateType, remark, id
   </sql>
   <select id="selectByExample" parameterType="com.crud.bean.ManufactureExample" resultMap="BaseResultMap">
@@ -85,7 +85,7 @@
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from [10.20.12.38].manufacture.dbo.category_brand_barcode_manufacture_total_all
+    from WIS38.manufacture.dbo.v_manufacture
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -101,12 +101,12 @@
   </delete>
   <insert id="insert" parameterType="com.crud.bean.Manufacture">
     insert into category_brand_barcode_manufacture_total_all (REP30050, 中文厂商, E0_1, 
-      E1, brand, 厂商码, [USE],
+      E1, brand, 厂商码, whether,
       InfoType, Manufacture, Manufacture_code, 
       new_brand, UpdateType, remark, 
       id)
     values (#{rep30050,jdbcType=VARCHAR}, #{中文厂商,jdbcType=VARCHAR}, #{e01,jdbcType=INTEGER}, 
-      #{e1,jdbcType=INTEGER}, #{brand,jdbcType=VARCHAR}, #{厂商码,jdbcType=VARCHAR}, #{[use],jdbcType=NCHAR},
+      #{e1,jdbcType=INTEGER}, #{brand,jdbcType=VARCHAR}, #{厂商码,jdbcType=VARCHAR}, #{whether,jdbcType=NCHAR},
       #{infotype,jdbcType=NVARCHAR}, #{manufacture,jdbcType=NVARCHAR}, #{manufactureCode,jdbcType=INTEGER}, 
       #{newBrand,jdbcType=VARCHAR}, #{updatetype,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR}, 
       #{id,jdbcType=INTEGER})
@@ -132,8 +132,8 @@
       <if test="厂商码 != null">
         厂商码,
       </if>
-      <if test="[use] != null">
-        [USE],
+      <if test="whether != null">
+        whether,
       </if>
       <if test="infotype != null">
         InfoType,
@@ -176,8 +176,8 @@
       <if test="厂商码 != null">
         #{厂商码,jdbcType=VARCHAR},
       </if>
-      <if test="[use] != null">
-        #{[use],jdbcType=NCHAR},
+      <if test="whether != null">
+        #{whether,jdbcType=NCHAR},
       </if>
       <if test="infotype != null">
         #{infotype,jdbcType=NVARCHAR},
@@ -229,8 +229,8 @@
       <if test="record.厂商码 != null">
         厂商码 = #{record.厂商码,jdbcType=VARCHAR},
       </if>
-      <if test="record.[use] != null">
-        [USE] = #{record.[use],jdbcType=NCHAR},
+      <if test="record.whether != null">
+        whether = #{record.whether,jdbcType=NCHAR},
       </if>
       <if test="record.infotype != null">
         InfoType = #{record.infotype,jdbcType=NVARCHAR},
@@ -266,7 +266,7 @@
       E1 = #{record.e1,jdbcType=INTEGER},
       brand = #{record.brand,jdbcType=VARCHAR},
       厂商码 = #{record.厂商码,jdbcType=VARCHAR},
-      [USE] = #{record.[use],jdbcType=NCHAR},
+      whether = #{record.whether,jdbcType=NCHAR},
       InfoType = #{record.infotype,jdbcType=NVARCHAR},
       Manufacture = #{record.manufacture,jdbcType=NVARCHAR},
       Manufacture_code = #{record.manufactureCode,jdbcType=INTEGER},
