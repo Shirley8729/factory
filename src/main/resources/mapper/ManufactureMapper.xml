@@ -17,6 +17,10 @@
     <result column="remark" jdbcType="VARCHAR" property="remark" />
     <result column="id" jdbcType="INTEGER" property="id" />
   </resultMap>
+  <resultMap id="BaseManMap" type="com.crud.bean.Manufacture">
+    <result column="Manufacture" jdbcType="NVARCHAR" property="manufacture" />
+    <result column="Manufacture_code" jdbcType="INTEGER" property="manufactureCode" />
+  </resultMap>
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">
@@ -92,6 +96,26 @@
     <if test="orderByClause != null">
       order by ${orderByClause}
     </if>
+  </select>
+  <select id="selectManExample" parameterType="com.crud.bean.ManufactureExample" resultMap="BaseManMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from WIS38.manufacture.dbo.v_manufacture
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from WIS38.manufacture.dbo.v_manufacture
+    where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByExample" parameterType="com.crud.bean.ManufactureExample">
     delete from category_brand_barcode_manufacture_total_all
@@ -277,5 +301,50 @@
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.crud.bean.User">
+    update SleepBC_Category_Incharge
+    <set>
+      <if test="record.rep30050 != null">
+        REP30050 = #{record.rep30050,jdbcType=VARCHAR},
+      </if>
+      <if test="record.中文厂商 != null">
+        中文厂商 = #{record.中文厂商,jdbcType=VARCHAR},
+      </if>
+      <if test="record.e01 != null">
+        E0_1 = #{record.e01,jdbcType=INTEGER},
+      </if>
+      <if test="record.e1 != null">
+        E1 = #{record.e1,jdbcType=INTEGER},
+      </if>
+      <if test="record.brand != null">
+        brand = #{record.brand,jdbcType=VARCHAR},
+      </if>
+      <if test="record.厂商码 != null">
+        厂商码 = #{record.厂商码,jdbcType=VARCHAR},
+      </if>
+      <if test="record.whether != null">
+        whether = #{record.whether,jdbcType=NCHAR},
+      </if>
+      <if test="record.infotype != null">
+        InfoType = #{record.infotype,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.manufacture != null">
+        Manufacture = #{record.manufacture,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.manufactureCode != null">
+        Manufacture_code = #{record.manufactureCode,jdbcType=INTEGER},
+      </if>
+      <if test="record.newBrand != null">
+        new_brand = #{record.newBrand,jdbcType=VARCHAR},
+      </if>
+      <if test="record.updatetype != null">
+        UpdateType = #{record.updatetype,jdbcType=INTEGER},
+      </if>
+      <if test="record.remark != null">
+        remark = #{record.remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

@@ -19,4 +19,10 @@ public interface ManufactureMapper {
     int updateByExampleSelective(@Param("record") Manufacture record, @Param("example") ManufactureExample example);
 
     int updateByExample(@Param("record") Manufacture record, @Param("example") ManufactureExample example);
+
+    List<Manufacture> selectManExample(ManufactureExample example);
+
+    Manufacture selectByPrimaryKey(Integer id);
+
+    int updateByPrimaryKeySelective(Manufacture manufacture);
 }
